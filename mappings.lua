@@ -17,7 +17,12 @@ return {
     },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
+    -- ["<leader>b"] = { name = "Buffers" },
+    ["<leader>b"] = false,
+    ["<leader>bb"] = false,
+    ["<leader>bd"] = false,
+    ["<leader>b\\"] = false,
+    ["<leader>b|"] = false,
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<C-c>"] = { "<ESC>:wq!<cr>"},
