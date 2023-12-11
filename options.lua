@@ -10,6 +10,7 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = true, -- sets vim.opt.wrap
     wrapscan = false,
+    mouse = "",
 --    showtabline = 0,
   },
   g = {
