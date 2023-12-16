@@ -33,7 +33,7 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+          -- "zig",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -69,6 +69,16 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    local cmp_nvim_lsp = require "cmp_nvim_lsp"
+
+    require("lspconfig").clangd.setup {
+      on_attach = on_attach,
+      capabilities = cmp_nvim_lsp.default_capabilities(),
+      cmd = {
+        "clangd",
+        "--offset-encoding=utf-16",
+      },
+    }
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
