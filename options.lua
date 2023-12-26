@@ -11,6 +11,7 @@ return {
     wrap = true, -- sets vim.opt.wrap
     wrapscan = false,
     mouse = "",
+    paste,
 --    showtabline = 0,
   },
   g = {
